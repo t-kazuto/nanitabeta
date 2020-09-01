@@ -10,13 +10,14 @@
 | birthday               | date    | null: false |
 
 ### Association
-- has_many :posts
+- has_many :restaurants
+- has_many :comments
 
 
 ## restaurants テーブル
 | Column                  | Type     | Options     |
 | ----------------------- | -------- | ----------- |
-| visit                   | date     | null: false |
+| day                     | date     | null: false |
 | time                    | string   |             |
 | prefecture_id           | integer  | null: false |
 | station                 | string   | null: false |
@@ -27,7 +28,23 @@
 | remark                  | string   |             |
 
 ### Association
-belongs_to :user
+- belongs_to :user
+- has_many :comments
+
+
+## comments テーブル
+| Column                  | Type     | Options     |
+| ----------------------- | -------- | ----------- |
+| user_id                 | integer  |             |
+| restaurant_id           | integer  |             |
+| text                    | text     |             |
+
+### Association
+- belongs_to :user
+- belongs_to :restaurant
+
+
+
 
 
 
