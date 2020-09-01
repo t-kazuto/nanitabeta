@@ -1,24 +1,34 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
+| Column                 | Type    | Options     |
+| ---------------------  | ------- | ----------- |
+| username               | string  | null: false |
+| email                  | string  | null: false |
+| password               | string  | null: false |
+| password_confirmation  | string  | null: false |
+| birthday               | date    | null: false |
 
-Things you may want to cover:
+### Association
+- has_many :posts
 
-* Ruby version
 
-* System dependencies
+## restaurants テーブル
+| Column                  | Type     | Options     |
+| ----------------------- | -------- | ----------- |
+| visit                   | date     | null: false |
+| time                    | string   |             |
+| prefecture_id           | integer  | null: false |
+| station                 | string   | null: false |
+| name                    | string   | null: false |
+| genre                   | string   | null: false |
+| menu                    | string   | null: false |
+| price                   | integer  | null: false |
+| remark                  | string   |             |
 
-* Configuration
+### Association
+belongs_to :user
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
