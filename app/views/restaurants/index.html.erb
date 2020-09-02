@@ -1,2 +1,10 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<div class="contents row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="content_post" style="background-image: url(<%= restaurant.image %>);">
+      <p><%= restaurant.text %></p>
+      <span class="name">
+        <%= restaurant.name %>
+      </span>
+    </div>
+  <% end %>
+</div>
