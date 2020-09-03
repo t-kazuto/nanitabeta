@@ -12,7 +12,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to action: :index
     else
-      render :new
+      redirect_to action: :new
     end
   end
 
