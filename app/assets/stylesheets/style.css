@@ -204,6 +204,7 @@ header.header .user_nav ul li a {
 
 form input,
 form textarea {
+  height: 40px;
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
@@ -213,6 +214,7 @@ form textarea {
 }
 
 form input[type="submit"] {
+  height: 50px;
   background-color: red;
   border-radius: 20px;
   color: #fff;
@@ -240,4 +242,11 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+
+.prefecture-select{
+  height: 40px;
+  width: 250px;
+  margin: 5px 0 15px;
 }
