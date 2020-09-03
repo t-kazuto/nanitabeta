@@ -1,10 +1,7 @@
 <div class="contents row">
   <% @restaurants.each do |restaurant| %>
-    <div class="content_post" style="background-image: url(<%= restaurant.image %>);">
-      <p><%= restaurant.text %></p>
-      <span class="name">
-        <%= restaurant.name %>
-      </span>
+    <div class="content_post">
+      <p><%= restaurant.nemu %></p>
     </div>
   <% end %>
 </div>
