@@ -8,11 +8,20 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    Restaurant.create(restaurant_params)
+    @restaurant = Restaurant.create(restaurant_params)
+    if @restaurant.save
+      redirect_to action: :index
+    else
+      render :new
+    end
   end
 
   private
   def restaurant_params
     params.require(:restaurant).permit(:day, :time, :prefecture_id, :station, :name, :genre, :menu, :price, :image, :remark)
+  end
+
+  def save
+    Restaurant.create(restaurant_params)
   end
 end
