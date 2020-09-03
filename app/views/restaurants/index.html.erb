@@ -1,7 +1,7 @@
 <div class="contents row">
   <% @restaurants.each do |restaurant| %>
     <div class="content_post">
-      <p><%= restaurant.nemu %></p>
+    <%= image_tag restaurant.image.variant(resize:'200x200'), class: 'restaurant-image' if restaurant.image.attached? %>
     </div>
   <% end %>
 </div>
