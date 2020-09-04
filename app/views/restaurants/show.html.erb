@@ -1,0 +1,49 @@
+<div class="restaurant-show">
+ <div class="restaurant-box">
+  <div class='restaurant-img-content'>
+<%= image_tag @restaurant.image ,class:"restaurant-box-img" %>
+  </div>
+ </div>
+</div>
+
+<table class="detail-table">
+<tbody>
+  <tr>
+    <th class="detail-item">来店日</th>
+    <td class="detail-value"><%= @restaurant.day %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">来店時間</th>
+    <td class="detail-value"><%= @restaurant.time %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">都道府県</th>
+    <td class="detail-value"><%= @restaurant.prefecture.name %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">最寄駅</th>
+    <td class="detail-value"><%= @restaurant.station %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">店名</th>
+    <td class="detail-value"><%= @restaurant.name %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">ジャンル</th>
+    <td class="detail-value"><%= @restaurant.genre %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">メニュー名</th>
+    <td class="detail-value"><%= @restaurant.menu %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">価格（円）</th>
+    <td class="detail-value"><%= @restaurant.price %></td>
+  </tr>
+  <tr>
+    <th class="detail-item">備考欄</th>
+    <td class="detail-value"><%= @restaurant.remark %></td>
+  </tr>
+</tbody>
+</table>
+      
