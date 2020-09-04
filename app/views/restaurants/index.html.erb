@@ -1,7 +1,8 @@
-<div class="contents row">
+<div class="contents">
   <% @restaurants.each do |restaurant| %>
-    <div class="content_post">
+    <div class="contents-list">
     <%= image_tag restaurant.image.variant(resize:'200x200'), class: 'restaurant-image' if restaurant.image.attached?%>
+    <p><%= restaurant.menu %></p>
     </div>
   <% end %>
 </div>
