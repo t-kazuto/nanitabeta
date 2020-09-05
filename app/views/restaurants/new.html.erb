@@ -1,6 +1,8 @@
 <div class="contents row">
   <div class="container">
     <%= form_with(model: @restaurants, local: true) do |f| %>
+      <h1>ユーザー名（必須）</h1>
+      <%= f.text_field :username, placeholder:"例）山田太郎" %>
       <h1>来店日（必須）</h1>
       <%= f.date_field :day %>
       <h1>来店時間</h1>
