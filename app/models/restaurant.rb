@@ -5,6 +5,7 @@ class Restaurant < ApplicationRecord
   belongs_to_active_hash :prefecture
   
   with_options presence: true do
+    validates :username
     validates :day
     validates :prefecture_id, numericality: { other_than: 1 }
     validates :station
