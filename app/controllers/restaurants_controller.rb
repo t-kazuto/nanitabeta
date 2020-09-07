@@ -20,9 +20,22 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
+  def edit
+    @restaurants = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.update(restaurant_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
+  end
+
   private
   def restaurant_params
-    params.require(:restaurant).permit(:day, :time, :prefecture_id, :station, :name, :genre, :menu, :price, :image, :remark)
+    params.require(:restaurant).permit(:username, :day, :time, :prefecture_id, :station, :name, :genre, :menu, :price, :image, :remark)
   end
 
   def save

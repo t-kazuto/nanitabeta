@@ -17,6 +17,7 @@
 ## restaurants テーブル
 | Column                  | Type     | Options     |
 | ----------------------- | -------- | ----------- |
+| username                | string   | null: false |
 | day                     | date     | null: false |
 | time                    | string   |             |
 | prefecture_id           | integer  | null: false |
