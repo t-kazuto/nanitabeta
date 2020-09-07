@@ -13,5 +13,6 @@ class Restaurant < ApplicationRecord
     validates :genre
     validates :menu
     validates :price
+    validates :image
   end
 end
