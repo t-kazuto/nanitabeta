@@ -14,8 +14,8 @@
         <h1 class="grid-6"><a href="/">NANITABETA</a></h1>
 
         <% if user_signed_in? %>
-         <div class="user_nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+         <div class="grid-6">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post" %>
           <a class="post" href="/restaurants/new">投稿</a>
          </div>
         <% else %>

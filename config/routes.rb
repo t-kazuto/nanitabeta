@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'restaurants/index'
   root to: "restaurants#index"
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions'
+  }
 
   resources :restaurants, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 end
