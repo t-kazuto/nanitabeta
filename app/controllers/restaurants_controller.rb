@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-    @restaurants = Restaurant.new
+    @restaurant = Restaurant.new
   end
 
   def create
@@ -44,7 +44,7 @@ class RestaurantsController < ApplicationController
 
   private
   def restaurant_params
-    params.require(:restaurant).permit(:username, :day, :time, :prefecture_id, :station, :name, :genre, :menu, :price, :image, :remark)
+    params.require(:restaurant).permit(:username, :day, :time, :prefecture_id, :station, :name, :genre, :menu, :price, :image, :remark).merge(user_id: current_user.id)
   end
 
   def save
