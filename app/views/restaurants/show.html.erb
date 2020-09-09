@@ -51,10 +51,11 @@
 </tbody>
 </table>
 
+<% if user_signed_in? && current_user.id == @restaurant.user_id %>
 <div class="btn-content">
   <%= link_to '編集', edit_restaurant_path, method: :get, class: "edit-btn" %>
 </div>
-
 <div class="btn-content">
   <%= link_to '削除', restaurant_path, method: :delete, class: "destroy-btn" %>
+<% end %>
 </div>
