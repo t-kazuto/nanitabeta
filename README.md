@@ -7,7 +7,6 @@
 | email                  | string  | null: false |
 | password               | string  | null: false |
 | password_confirmation  | string  | null: false |
-| birthday               | date    | null: false |
 
 ### Association
 - has_many :restaurants

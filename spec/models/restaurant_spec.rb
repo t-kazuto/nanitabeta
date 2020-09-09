@@ -74,27 +74,5 @@ RSpec.describe Restaurant, type: :model do
       @restaurant.remark = nil
       expect(@restaurant).to be_valid
     end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   end
 end
