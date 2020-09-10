@@ -1,29 +1,28 @@
-<div class="contents row">
-  <div class="container">
+<div class="container">
+<h2>投稿</h2>
     <%= form_with(model: @restaurant, local: true) do |f| %>
-      <h1>ユーザー名（必須）</h1>
+      <%= f.label :ユーザー名（必須） %>
       <%= f.text_field :username, placeholder:"例）山田太郎" %>
-      <h1>来店日（必須）</h1>
+      <%= f.label :来店日（必須） %>
       <%= f.date_field :day %>
-      <h1>来店時間</h1>
+      <%= f.label :来店時間 %>
       <%= f.text_field :time, placeholder:"例）12時" %>
-      <h1>都道府県（必須）</h1>
+      <%= f.label :都道府県（必須） %>
       <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
-      <h1>最寄駅（必須）</h1>
+      <%= f.label :最寄駅（必須） %>
       <%= f.text_field :station, placeholder:"例）東京駅" %>
-      <h1>店名（必須）</h1>
+      <%= f.label :店名（必須） %>
       <%= f.text_field :name, placeholder:"例）〇〇食堂"%>
-      <h1>ジャンル（必須）</h1>
+      <%= f.label :ジャンル（必須） %>
       <%= f.text_field :genre, placeholder:"例）ラーメン"%>
-      <h1>メニュー名（必須）</h1>
+      <%= f.label :メニュー名（必須） %>
       <%= f.text_field :menu, placeholder:"例）特製醤油ラーメン"%>
-      <h1>価格/円（必須）</h1>
+      <%= f.label :価格（必須） %>
       <%= f.text_field :price, placeholder:"例）1000"%>
-      <h1>画像（必須）</h1>
+      <%= f.label :画像（必須） %>
       <%= f.file_field :image, id:"restaurant-image"%>
-      <h1>備考欄</h1>
+      <%= f.label :備考欄 %>
       <%= f.text_field :remark, placeholder:"形式（店内・テイクアウト）、メニューの特徴、店内の雰囲気など" %>
       <%= f.submit "送信" %>
     <% end %>
-  </div>
 </div>
