@@ -7,7 +7,7 @@ RSpec.describe Restaurant, type: :model do
       @restaurant.image = fixture_file_upload('spec/fixtures/public/images/test_image.jpeg')
     end
 
-    it "username、day、prefecture_id、station、name、genre、menu、price、imageが存在すれば登録できる" do
+    it 'username、day、prefecture_id、station、name、genre、menu、price、imageが存在すれば登録できる' do
       expect(@restaurant).to be_valid
     end
 
@@ -26,7 +26,7 @@ RSpec.describe Restaurant, type: :model do
     it 'prefecture_idが空では登録できない' do
       @restaurant.prefecture_id = nil
       @restaurant.valid?
-      expect(@restaurant.errors.full_messages).to include("Prefecture Select")
+      expect(@restaurant.errors.full_messages).to include('Prefecture Select')
     end
 
     it 'stationが空では登録できない' do

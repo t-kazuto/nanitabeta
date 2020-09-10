@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @restaurants = Restaurant.all.order("created_at DESC")
+    @restaurants = Restaurant.all.order('created_at DESC')
   end
 
   def new
@@ -45,6 +45,7 @@ class RestaurantsController < ApplicationController
   end
 
   private
+
   def restaurant_params
     params.require(:restaurant).permit(:username, :day, :time, :prefecture_id, :station, :name, :genre, :menu, :price, :image, :remark).merge(user_id: current_user.id)
   end
