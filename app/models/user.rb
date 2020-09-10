@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :restaurants
 
   with_options presence: true do
-  validates :username
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
+    validates :username
+    validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
   end
 end
