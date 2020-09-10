@@ -1,168 +1,109 @@
-.row {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 600px;
-}
-
-body{
+/* リセットCSS */
+body {
+  color: #333;
+  margin: 0 auto;
   height: 100%;
   background-color: #FFE4C4;
-  padding-top: 60px;
 }
 
-h1,
-body {
-  line-height: 1.57;
+header {
+  height: 90px;
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.heading {
+  width: 50%;
+  margin-left: 30px;
   letter-spacing: 0.15em;
-  font-size: 16px;
-  color: #666;
-  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+}
+
+.navbar {
+  width: 50%;
+  padding: 20px;
+}
+
+.nav-lists {
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+li{
+  list-style: none;
 }
 
 a {
   text-decoration: none;
-  color: #666;
+  color: #FF9900;
 }
 
 a:hover {
-  color: #57C3E9;
+  color: #00FF99;
 }
 
-.bold {
-  font-weight: bold;
-}
-
-.ultra {
-  font-size: 2em !important;
-}
-
-.btn,
-header.header div.header__bar.row div.grid-6 a.post {
+.btn {
+  width: 200px;
+  height: 50px;
   padding: 8px 10px;
-  font-size: 14px;
+  font-size: 20px;
   border: 2px solid #FF9900;
   color: #FF9900;
   font-weight: bold;
   text-align: center;
-  border-radius: 3px;
   display: inline-block;
 }
 
-.btn:hover,
-header.header div.header__bar.row div.grid-6 a.post:hover {
-  border-color: #9bdbf2;
-  color: #9bdbf2;
+/* トップ画像*/
+.first-view{
+  height: 30vh;
 }
 
-header.header {
-  padding: 10px;
-  border-bottom: 1px solid #D8D8D8;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  height: 62px;
+.top-image{
+  height: 100%;
+  width: 100%;
 }
 
-header.header div.header__bar.row {
-  position: relative;
-}
-
-header.header div.header__bar.row h1.grid-6 {
-  font-size: 20px;
-  line-height: 41px;
-  float: left;
-}
-
-header.header div.header__bar.row h1.grid-6 a {
-  display: block;
-}
-
-header.header div.header__bar.row div.grid-6 {
-  float: right;
-  text-align: right;
-}
-
-header.header div.header__bar.row div.grid-6 a.post {
-  width: 120px;
-  display: inline-left;
-  margin-left: 10px;
-}
-
-header.header .user_nav {
-  position: relative;
-  height: 100px;
-  right: 0;
-}
-
-header.header .user_nav span {
-  top: 5px;
-  display: block;
-  float: left;
+.title {
+  width: 50%;
   margin-left: 30px;
-  width: 150px;
-  height: 50px;
-  font-size: 1em;
-  cursor: pointer;
-  position: relative;
+  color: #FF9900;
 }
 
-header.header .user_nav span:after {
-  content: '▼';
-  font-size: .7em;
-  margin-left: -4px;
+/* トップページ*/
+.contents{
+  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  margin: auto;
+  background-color: #FFE4C4;
 }
 
-header.header .user_nav span:hover ul {
-  color: #57C3E9;
-  display: block;
+.contents-list{
+  padding: 20px;
+  min-width: 10%;
 }
 
-header.header .user_nav ul {
-  display: none;
-  position: absolute;
-  top: 46px;
-  right: 0;
-  border-left: 1px solid #d8d8d8;
-  border-right: 1px solid #d8d8d8;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+footer {
+  margin: 30px auto;
 }
 
-header.header .user_nav ul li {
-  background-color: #f0f0f0;
+footer p {
+  margin-left: 30px;
+  color:#FF9900;
+  
 }
 
-header.header .user_nav ul li a {
-  display: block;
-  padding: 10px 20px;
-  text-align: left;
-  border-bottom: 1px solid #d8d8d8;
-}
-
-.form {
-  background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
-  background-size: cover;
-}
-
-.form .contents {
-  position: absolute;
-  left: 0;
-  top: 30%;
-  bottom: 0;
-  right: 0;
-}
-
-.form footer {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
+/* 入力フォーム*/
+.container {
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 100px auto;
 }
 
 form input,
@@ -173,7 +114,7 @@ form textarea {
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
-  font-family: "游ゴシック", "YuGothic";
+  font-family: 'Unica One';
 }
 
 form input[type="submit"] {
@@ -186,48 +127,20 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: #00FF99;
 }
-
-.container {
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: white;
-  box-sizing: border-box;
-}
-
-footer {
-  margin: 30px auto;
-  padding: 10px;
-  color:black;
-}
-
-footer p {
-  text-align: center;
-}
-
 
 .prefecture-select{
-  height: 40px;
-  width: 250px;
+  height: 50px;
+  width: 100%;
   margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: 'Unica One';
 }
 
-.contents{
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 600px;
-  margin: auto;
-}
-
-.contents-list{
-  padding: 20px;
-  min-width: 33%;
-}
-
+/* 詳細ページ*/
 .restaurant-show {
   background-color: #FFE4C4;
   width: 100vw;

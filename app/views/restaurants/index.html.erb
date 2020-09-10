@@ -1,10 +1,22 @@
+<div class="first-view">
+<%= image_tag 'food.jpg' ,class: "top-image" %>
+</div>
+
+<h2 class="title">あなたは今日何食べましたか？</h2>
+
 <div class="contents">
   <% @restaurants.each do |restaurant| %>
     <div class="contents-list">
     <%= image_tag restaurant.image.variant(resize:'200x200'), class: 'restaurant-image' if restaurant.image.attached?%>
-    <p></p>
-    <%= link_to restaurant.menu,restaurant_path(restaurant.id) %>
+    <p><%= link_to restaurant.day,restaurant_path(restaurant.id) %></p>
     </div>
   <% end %>
- </div>
 </div>
+
+<footer>
+<h2 class="title">NANITABETAとは？</h2>
+<p>あなたの外食の記録を管理するアプリです</p>
+
+</footer>
+
+
