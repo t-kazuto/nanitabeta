@@ -48,8 +48,31 @@
     <th class="detail-item">備考欄</th>
     <td class="detail-value"><%= @restaurant.remark %></td>
   </tr>
+    <tr>
+    <th class="detail-item">コメント</th>
+    <td class="detail-value">
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+       <p><strong><%= link_to comment.user.username %>：</strong><%= comment.text %></p>
+      <% end %>
+    <% end %>
+    </td>
+  </tr>
+
 </tbody>
 </table>
+
+<div class="comments">
+    <% if user_signed_in? && current_user.id != @restaurant.user_id %>
+      <%= form_with(model: [@restaurant, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "気になったらコメントしよう"%>
+        <%= form.submit "コメントする" %>
+      <% end %>
+    <% elsif user_signed_in? && current_user.id == @restaurant.user_id %>
+    <% else %>
+      <strong><p>※コメントの投稿には新規登録/ログインが必要です</p></strong>
+    <% end %>
+</div>
 
 <% if user_signed_in? && current_user.id == @restaurant.user_id %>
 <div class="btn-content">
