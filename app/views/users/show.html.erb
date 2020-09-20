@@ -1,0 +1,9 @@
+<h2 class="title"><%= @username %>の投稿一覧</h2>
+<div class="contents">
+  <% @restaurants.each do |restaurant| %>
+    <div class="contents-list">
+    <%= image_tag restaurant.image.variant(resize:'200x200'), class: 'restaurant-image' if restaurant.image.attached?%>
+    <p><%= link_to restaurant.day,restaurant_path(restaurant.id) %></p>
+    </div>
+  <% end %>
+</div>
