@@ -17,7 +17,7 @@
   <div class="navbar">
   <ul class="nav-lists">
   <% if user_signed_in? %>
-  <%= link_to current_user.username, "#", class: "btn" %>
+  <%= link_to current_user.username, "/users/#{current_user.id}", class: "btn" %>
   <li><%= link_to "投稿", new_restaurant_path, class: "btn" %></li>
   <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn" %></li>
   <% else %>
