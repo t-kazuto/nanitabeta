@@ -49,7 +49,8 @@ a:hover {
   padding: 8px 10px;
   font-size: 20px;
   border: 2px solid #FF9900;
-  color: #FF9900;
+  color: #f0f0f0;
+  background-color: #FF9900;
   font-weight: bold;
   text-align: center;
   display: inline-block;
@@ -216,4 +217,14 @@ form input[type="submit"]:hover {
   color: #FFF;
   margin: 20px 0px;
   padding: 2vh 10vw;
+}
+
+.comments {
+  max-width: 600px;
+  margin: auto;
+}
+
+.comments p {
+  color: #FF9900;
+  text-align: center;
 }

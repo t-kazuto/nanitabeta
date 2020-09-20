@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions'
   }
 
-  resources :restaurants, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :restaurants  do
+   resources :comments, only: :create
+  end
 end
