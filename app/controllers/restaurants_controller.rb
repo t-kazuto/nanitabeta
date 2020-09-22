@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
     @q = Restaurant.ransack(params[:q])
-    @restaurants = @q.result(distinct: true).order('created_at DESC') 
+    @restaurants = @q.result(distinct: true).order('created_at DESC')
   end
 
   def new
