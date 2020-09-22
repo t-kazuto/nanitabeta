@@ -70,7 +70,7 @@
       <% end %>
     <% elsif user_signed_in? && current_user.id == @restaurant.user_id %>
     <% else %>
-      <strong><p>※コメントの投稿には新規登録/ログインが必要です</p></strong>
+      <strong><p>※コメントの投稿には新規登録/ログインが必要です※</p></strong>
     <% end %>
 </div>
 
@@ -82,3 +82,8 @@
   <%= link_to '削除', restaurant_path, method: :delete, class: "destroy-btn" %>
 <% end %>
 </div>
+
+<div class="comments">
+<strong><p><%= link_to 'トップページへ戻る', root_path, method: :get %></p></strong>
+</div>
+

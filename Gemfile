@@ -71,3 +71,5 @@ gem 'active_hash'
 gem 'devise'
 
 gem "aws-sdk-s3", require: false
+
+gem 'ransack'

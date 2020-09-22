@@ -241,3 +241,14 @@ form input[type="submit"]:hover {
   color: #FF9900;
   text-align: center;
 }
+
+.search-form {
+  margin-left: 30px;
+  width: 30%;
+  display: inline-block;
+}
+
+.search-btn {
+  margin-left: 30px;
+  width: 10%;
+}

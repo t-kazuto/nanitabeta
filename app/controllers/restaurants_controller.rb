@@ -2,7 +2,9 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @restaurants = Restaurant.all.order('created_at DESC')
+    @restaurants = Restaurant.all.order('created_at DESC') 
+    @q = Restaurant.ransack(params[:q])
+    @restaurants = @q.result(distinct: true)
   end
 
   def new
@@ -25,7 +27,7 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
-    @restaurants = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def update
@@ -44,6 +46,10 @@ class RestaurantsController < ApplicationController
     else
       render :show
     end
+  end
+
+  def search
+    @q = Restaurant.search(params[:keyword])
   end
 
   private
