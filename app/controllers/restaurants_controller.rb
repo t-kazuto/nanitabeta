@@ -2,9 +2,9 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @restaurants = Restaurant.all.order('created_at DESC') 
+    @restaurants = Restaurant.all
     @q = Restaurant.ransack(params[:q])
-    @restaurants = @q.result(distinct: true)
+    @restaurants = @q.result(distinct: true).order('created_at DESC')
   end
 
   def new
