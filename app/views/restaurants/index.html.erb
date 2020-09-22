@@ -3,6 +3,11 @@
 </div>
 
 <h2 class="title">あなたは今日何食べましたか？</h2>
+<%= search_form_for @q do |f| %>
+  <%= f.search_field :username_or_station_or_name_or_genre_or_menu_cont, placeholder:"投稿者・最寄駅・店名・ジャンル・メニュー名で絞り込み", 
+  class:"search-form" %>
+  <%= f.submit "検索", class:"search-btn" %>
+<% end %>
 
 <div class="contents">
   <% @restaurants.each do |restaurant| %>
